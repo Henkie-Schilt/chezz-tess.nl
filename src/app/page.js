@@ -4,7 +4,7 @@ export default function Home() {
     <main >
       <div >
         <p>
-          Hoi ik ben Chezz-Tess
+          Hoi ik ben Chezz-Tess, en dit is mijn eerste pagina van de website.
 
         </p>
       </div>
