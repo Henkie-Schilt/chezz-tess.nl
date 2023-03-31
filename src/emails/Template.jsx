@@ -30,8 +30,8 @@ export const TemplateEmail = ({ children, preview }) => (
                             src={`https://${process.env.VERCEL_URL}/static/logo.png`}
                             style={{ margin: "auto" }}
                             alt={WEBSHOP_NAME}
-                            height="250"
-                            width="250"
+                            height="200"
+                            width="200"
                         />
                     </Link>
                 </Section>
