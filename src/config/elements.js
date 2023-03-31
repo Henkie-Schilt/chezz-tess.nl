@@ -8,7 +8,7 @@ export const HomeElement = (
     <Attention
         text={
             <span>
-                Ook voor goede doelen bied ik mijn diensten aan. Kijk voor meer informatie op de{" "}
+                Ik kan ook personelijke sierraden of kaarsen maken, je kunt hierover contact met me openemen via de{" "}
                 <Link href="/contact" style={{ color: "black" }}>
                     <b>contactpagina</b>
                 </Link>
@@ -30,9 +30,7 @@ export const CheckoutElement = (
 
 export const ContactElement = (
     <Attention
-        text="Wil je als stichting samenwerken, door de kaarten tegen gereduceerd tarief bij mij in te kopen? Dit
-            kan! De kaarten kunnen zelfs geprint worden met jullie logo op de achterzijde, om zo meer
-            naamsbekend te verkrijgen. Interesse? Vul dan het contactformulier in."
+        text="Ik kan ook personelijke sierraden of kaarsen maken, je kunt hierover contact met me openemen via het "
         icon={VolunteerActivismOutlinedIcon}
     />
 );
