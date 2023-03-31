@@ -8,7 +8,7 @@ export const ContactEmail = ({ contact }) => (
     <TemplateEmail preview={`${contact.firstName}, ${CONTACT_EMAIL_SUBJECT}`}>
         <Section style={message}>
             <Heading style={global.heading}>Bedankt voor je bericht</Heading>
-            <Text style={global.text}>Beste {contact.firstName},</Text>
+            <Text style={global.text}>Beste, {contact.firstName},</Text>
             <Text style={{ ...global.text, marginTop: 24 }}>{CONTACT_EMAIL_TEXT}</Text>
         </Section>
         <Hr style={global.hr} />
