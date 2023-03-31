@@ -1,10 +1,9 @@
 import { WEBSHOP_NAME, WEBSHOP_DESCRIPTION, WEBSHOP_PRIMARY_COLOR } from "@/config/constants";
 import { getProductTokens } from "@/utils/utils";
-import Home from "@/organisms/Home";
 
 export const metadata = {
-    title: WEBSHOP_NAME,
-    description: WEBSHOP_DESCRIPTION,
+    title: `${WEBSHOP_NAME} | Webshop`,
+    description: `${WEBSHOP_DESCRIPTION} | Webshop`,
     themeColor: WEBSHOP_PRIMARY_COLOR,
     icons: {
         icon: "/static/logo.png",
@@ -12,6 +11,6 @@ export const metadata = {
     keywords: getProductTokens(),
 };
 
-const HomePage = () => <Home />;
+const WebshopLayout = ({ children }) => children;
 
-export default HomePage;
+export default WebshopLayout;

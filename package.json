@@ -1,18 +1,33 @@
 {
-  "name": "chezz-tess.nl",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+    "name": "chezz-tess",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "update": "yarn upgrade-interactive --latest",
+        "email": "email dev --dir ./src/emails",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "dev": "next dev"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.10.6",
+        "@emotion/styled": "^11.10.6",
+        "@mui/icons-material": "^5.11.11",
+        "@mui/material": "^5.11.14",
+        "@react-email/components": "^0.0.4",
+        "date-fns": "^2.29.3",
+        "eslint": "8.36.0",
+        "eslint-config-next": "13.2.4",
+        "framer-motion": "^10.9.1",
+        "jotai": "^2.0.3",
+        "lodash": "^4.17.21",
+        "next": "13.2.4",
+        "nodemailer": "^6.9.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-email": "^1.9.0",
+        "react-hook-form": "^7.43.8",
+        "react-toastify": "^9.1.2"
+    }
 }

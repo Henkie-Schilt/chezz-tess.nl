@@ -2,7 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+        "@/molecules/*": ["src/components/molecules/*"],
+        "@/organisms/*": ["src/components/organisms/*"],
+        "@/atoms/*": ["src/components/atoms/*"],
+        "@/config/*": ["src/config/*"],
+        "@/emails/*": ["src/emails/*"],
+        "@/forms/*": ["src/forms/*"],
+        "@/utils/*": ["src/utils/*"],
     }
   }
 }
