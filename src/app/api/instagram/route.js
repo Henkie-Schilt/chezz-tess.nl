@@ -6,7 +6,7 @@ export const revalidate = 60 * 60;
 export async function GET() {
     try {
         const media = await fetch(
-            `https://graph.instagram.com/${local.env.INSTAGRAM_USER_ID}/media?access_token=${local.env.INSTAGRAM_ACCESS_TOKEN}&fields=media_url,permalink,media_type`
+            `https://graph.instagram.com/${process.env.INSTAGRAM_USER_ID}/media?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&fields=media_url,permalink,media_type`
         );
 
         const posts = await media.json();
