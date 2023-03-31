@@ -69,7 +69,7 @@ export const ABOUT_TEXT = (
         <br /> 
          Ik ben Tessa. Ik maak al een tijdje allerlei leuke dingen zoals kaarsen en sieraden.
             Ook vond het tijd om dit met de wereld te gaan delen.
-            Op dit account zullen verschillende foto’s geplaatst.
+            Op dit account zullen verschillende foto’s geplaatst worden.
 
 <br />
 
