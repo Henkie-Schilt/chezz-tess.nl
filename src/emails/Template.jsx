@@ -41,7 +41,7 @@ export const TemplateEmail = ({ children, preview }) => (
                 <Section style={paddingY}>
                     <Text style={global.heading}>Favorieten</Text>
                     <Row style={favorites.container}>
-                        {filter(products, ["favorite", true]).map(({ code, name, description }) => (
+                        {filter(products, ["favorite", true]).map(({ code, name }) => (
                             <Column
                                 style={{ ...favorites.product, paddingLeft: "4px", width: "31%" }}
                                 align="center"
@@ -54,7 +54,6 @@ export const TemplateEmail = ({ children, preview }) => (
                                         alt={name}
                                     />
                                     <Text style={favorites.title}>{name}</Text>
-                                    <Text style={favorites.text}>{description}</Text>
                                 </Link>
                             </Column>
                         ))}
