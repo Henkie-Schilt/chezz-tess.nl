@@ -8,14 +8,10 @@ export const WEBSHOP_SECONDARY_COLOR = "#000000";
 export const WEBSHOP_BACKGROUND_COLOR = "#f2f2f2"; 
  
 
-export const RECEIPT_EMAIL_SUBJECT = 
-"Bedankt voor je bestelling bij Chezz Tess"; 
-export const CONTACT_EMAIL_SUBJECT = 
-"Bedankt voor je bericht aan Chezz Tess";
-export const RECEIPT_EMAIL_TEXT =
-    "Leuk dat je een bestelling hebt gedaan bij Chezz Tess! Je ontvangt binnen een paar dagen een factuur. Zou je zo vriendelijk willen zijn het bedrag zo spoedig mogelijk over te maken? Dan kunnen wij het pakketje jouw kant op sturen. Bedankt voor je bestelling en vertrouwen!"; 
-export const CONTACT_EMAIL_TEXT =
-    "Bedankt voor je bericht! Hieronder vindt je een overzicht van je bericht. We streven ernaar om je bericht binnen 5 werkdagen te beantwoorden!";
+export const RECEIPT_EMAIL_SUBJECT = "Bedankt voor je bestelling bij Chezz Tess"; 
+export const CONTACT_EMAIL_SUBJECT = "Bedankt voor je bericht aan Chezz Tess";
+export const RECEIPT_EMAIL_TEXT = "Leuk dat je een bestelling hebt gedaan bij Chezz Tess! Je ontvangt binnen een paar dagen een factuur. Zou je zo vriendelijk willen zijn het bedrag zo spoedig mogelijk over te maken? Dan kunnen wij het pakketje jouw kant op sturen. Bedankt voor je bestelling en vertrouwen!"; 
+export const CONTACT_EMAIL_TEXT = "Bedankt voor je bericht! Hieronder vindt je een overzicht van je bericht. We streven ernaar om je bericht binnen 5 werkdagen te beantwoorden!";
 
 
 export const GMAIL_USERNAME = "chezz.tess@gmail.com";

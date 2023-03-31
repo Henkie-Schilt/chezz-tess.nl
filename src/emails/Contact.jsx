@@ -1,9 +1,10 @@
 import { Column, Heading, Hr, Row, Section, Text } from "@react-email/components";
-import { CONTACT_EMAIL_SUBJECT} from "@/config/constants";
-import { CONTACT_EMAIL_TEXT } from "@/config/constants";
+import { CONTACT_EMAIL_SUBJECT, CONTACT_EMAIL_TEXT} from "@/config/constants";
+import { RECEIPT_EMAIL_TEXT, RECEIPT_EMAIL_SUBJECT } from "@/config/constants";
 import TemplateEmail from "./Template";
 import format from "date-fns/format";
 import nl from "date-fns/locale/nl";
+import { constant } from "lodash";
 
 export const ContactEmail = ({ contact }) => (
     <TemplateEmail preview={`${contact.firstName}, ${CONTACT_EMAIL_SUBJECT}`}>

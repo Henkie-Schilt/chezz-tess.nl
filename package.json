@@ -17,7 +17,7 @@
         "@mui/material": "^5.11.14",
         "@react-email/components": "^0.0.4",
         "date-fns": "^2.29.3",
-        "eslint": "8.36.0",
+        "eslint": "8.37.0",
         "eslint-config-next": "13.2.4",
         "framer-motion": "^10.9.1",
         "jotai": "^2.0.3",
