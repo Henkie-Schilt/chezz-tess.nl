@@ -44,13 +44,13 @@ const InstagramPosts = () => {
                             border: (theme) => `3px solid ${theme.palette.primary.main}`,
                             width: { xs: "200px", sm: "250px", md: "350px" },
                             position: "relative",
-                            borderRadius: "50%",
+                            borderRadius: "20%",
                             maxWidth: "80vw",
                             pb: "100%",
                         }}
                     >
                         <Image
-                            style={{ margin: "auto", borderwidth: "170px", borderRadius: "50%" }}
+                            style={{ margin: "auto", borderwidth: "170px", borderRadius: "20%" }}
                             alt="Instagram post"
                             src={media_url}
                             fill
