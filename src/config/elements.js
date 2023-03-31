@@ -30,7 +30,7 @@ export const CheckoutElement = (
 
 export const ContactElement = (
     <Attention
-        text="Ik kan ook personelijke sierraden of kaarsen maken, je kunt hierover contact met me openemen via het "
+        text="Ik kan ook personelijke sierraden of kaarsen maken, je kunt hierover contact met me openemen via dit contact formulier"
         icon={VolunteerActivismOutlinedIcon}
     />
 );
