@@ -30,8 +30,8 @@ export const TemplateEmail = ({ children, preview }) => (
                             src={`https://${process.env.VERCEL_URL}/static/logo.png`}
                             style={{ margin: "auto" }}
                             alt={WEBSHOP_NAME}
-                            height="200"
-                            width="200"
+                            height="75"
+                            width="75"
                         />
                     </Link>
                 </Section>
@@ -41,7 +41,7 @@ export const TemplateEmail = ({ children, preview }) => (
                 <Section style={paddingY}>
                     <Text style={global.heading}>Favorieten</Text>
                     <Row style={favorites.container}>
-                        {filter(products, ["favorite", true]).map(({ code, name, price }) => (
+                        {filter(products, ["favorite", true]).map(({ code, name, }) => (
                             <Column
                                 style={{ ...favorites.product, paddingLeft: "4px", width: "31%" }}
                                 align="center"

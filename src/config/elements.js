@@ -1,5 +1,5 @@
 "use client";
-import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
+import VolunteerActivismOutlinedIcon from "@mui/icons-material/VolunteerActivismOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import Attention from "@/atoms/Attention";
 import Link from "next/link";
@@ -8,14 +8,14 @@ export const HomeElement = (
     <Attention
         text={
             <span>
-                Ik kan ook personelijke sierraden of kaarsen maken, je kunt hierover contact met me openemen via de{" "}
+                Ook voor goede doelen bied ik mijn diensten aan. Kijk voor meer informatie op de{" "}
                 <Link href="/contact" style={{ color: "black" }}>
                     <b>contactpagina</b>
                 </Link>
                 .
             </span>
         }
-        icon={HandshakeOutlinedIcon}
+        icon={VolunteerActivismOutlinedIcon}
     />
 );
 
@@ -30,7 +30,9 @@ export const CheckoutElement = (
 
 export const ContactElement = (
     <Attention
-        text="Ik kan ook personelijke sierraden of kaarsen maken, je kunt hierover contact met me openemen via dit contact formulier"
-        icon={HandshakeOutlinedIcon}
+        text="Wil je als stichting samenwerken, door de kaarten tegen gereduceerd tarief bij mij in te kopen? Dit
+            kan! De kaarten kunnen zelfs geprint worden met jullie logo op de achterzijde, om zo meer
+            naamsbekend te verkrijgen. Interesse? Vul dan het contactformulier in."
+        icon={VolunteerActivismOutlinedIcon}
     />
 );

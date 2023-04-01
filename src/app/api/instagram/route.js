@@ -1,3 +1,4 @@
+import { AMOUNT_INSTAGRAM_POSTS } from "@/config/constants";
 import { NextResponse } from "next/server";
 
 export const revalidate = 60 * 60;
@@ -10,7 +11,7 @@ export async function GET() {
 
         const posts = await media.json();
         return NextResponse.json(
-            posts.data.filter(({ media_type }) => media_type === "IMAGE").slice(0, 8)
+            posts.data.filter(({ media_type }) => media_type === "IMAGE").slice(0, AMOUNT_INSTAGRAM_POSTS)
         );
     } catch (e) {
         console.error(e);

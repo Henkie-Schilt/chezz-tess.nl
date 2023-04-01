@@ -36,10 +36,10 @@ const ProductPage = ({ params: { code } }) => {
                         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                             {product.description}
                         </Typography>
-                        <Detail label="lengte" value={product.format} />
+                        <Detail label="Formaat" value={product.format} />
                         <Detail label="Kleur" value={product.color} />
-                        <Detail label="Gewicht" value={product.paper} />
-                        <Detail label="Diameter" value={product.roundCorners ? "Rond" : "2cm"} />
+                        <Detail label="Papier" value={product.paper} />
+                        <Detail label="Hoeken" value={product.roundCorners ? "Rond" : "Rechthoek"} />
                         <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
                             {PRODUCT_TEXT}
                         </Typography>
