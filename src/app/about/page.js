@@ -13,7 +13,7 @@ const AboutPage = () => (
                 <Image
                     style={{ objectFit: "contain", borderRadius: "20%" }}
                     alt={WEBSHOP_DESCRIPTION}
-                    src="/static/about.jpg"
+                    src="/static/about.jpeg"
                     fill
                 />
             </Box>
