@@ -6,7 +6,7 @@ export const deliveryHelpText = (
             verzendkosten:
         </p>
         <ul>
-            <li>Ik kom het zelf wel ophalen.</li>
+            <li>Ik kom het zelf ophalen.</li>
             <li>Ik kan het ontvangen via familie / Ik ben familie.</li>
         </ul>
     </div>
