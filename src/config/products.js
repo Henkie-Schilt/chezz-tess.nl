@@ -1,6 +1,6 @@
 
 export const PRODUCT_IMAGES_PREFIX = "/Productcode - ";
-export const PRODUCT_IMAGES_FILE_TYPE = ".jpg";
+export const PRODUCT_IMAGES_FILE_TYPE = ".jpeg";
 export const products = [
   
     {

@@ -11,7 +11,7 @@ const AboutPage = () => (
         <Grid2 xs={12} sm={6} md={5} lg={4}>
             <Box sx={{ pb: "100%", position: "relative" }}>
                 <Image
-                    style={{ objectFit: "contain", borderRadius: "20%" }}
+                    style={{ objectFit: "contain", borderRadius: "40%" }}
                     alt={WEBSHOP_DESCRIPTION}
                     src="/static/about.jpeg"
                     fill
