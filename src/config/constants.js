@@ -46,7 +46,7 @@ export const DELIVERY__COSTS_TEXT = (
  
 
 export const PRODUCT_TEXT = (
-    <span> Test vanuit het config bestand </span>
+    <span>  </span>
 );
  
  
