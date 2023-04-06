@@ -1,4 +1,4 @@
-import { GMAIL_USERNAME, WEBSHOP_NAME, WEBSHOP_URL } from "@/config/constants";
+import { EMAIL_RECOMMENDED_PRODUCTS, GMAIL_USERNAME, WEBSHOP_NAME, WEBSHOP_URL } from "@/config/constants";
 import products from "@/config/products";
 import filter from "lodash/filter";
 import uniq from "lodash/uniq";
@@ -39,11 +39,11 @@ export const TemplateEmail = ({ children, preview }) => (
                 {children}
                 <Hr style={global.hr} />
                 <Section style={paddingY}>
-                    <Text style={global.heading}>Favorieten</Text>
-                    <Row style={favorites.container}>
-                        {filter(products, ["favorite", true]).map(({ code, name, }) => (
+                    <Text style={global.heading}>{EMAIL_RECOMMENDED_PRODUCTS}</Text>
+                    <Row style={recommended.container}>
+                        {filter(products, ["recommended", true]).map(({ code, name }) => (
                             <Column
-                                style={{ ...favorites.product, paddingLeft: "4px", width: "31%" }}
+                                style={{ ...recommended.product, paddingLeft: "4px", width: "31%" }}
                                 align="center"
                                 key={code}
                             >
@@ -53,7 +53,7 @@ export const TemplateEmail = ({ children, preview }) => (
                                         width="100%"
                                         alt={name}
                                     />
-                                    <Text style={favorites.title}>{name}</Text>
+                                    <Text style={recommended.title}>{name}</Text>
                                 </Link>
                             </Column>
                         ))}
@@ -150,7 +150,7 @@ const container = {
     width: "600px",
 };
 
-const favorites = {
+const recommended = {
     container: {
         padding: "20px 0",
     },

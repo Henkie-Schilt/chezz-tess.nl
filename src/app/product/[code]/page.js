@@ -4,22 +4,32 @@ import ShoppingCartAmount from "@/molecules/ShoppingCartAmount";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import ProductCard from "@/molecules/ProductCard";
 import Typography from "@mui/material/Typography";
-import { PRODUCT_TEXT } from "@/config/constants";
+import { PRODUCT_DETAILS, PRODUCT_TEXT } from "@/config/constants";
+import { notFound } from "next/navigation";
+import products from "@/config/products";
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
+import Chip from "@mui/material/Chip";
 import Detail from "@/atoms/Detail";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+
+export const dynamicParams = false;
+export const generateStaticParams = () => products.map(({ code }) => ({ code }));
 
 const ProductPage = ({ params: { code } }) => {
     const relatedProducts = getRelatedProducts(code);
     const product = getProduct(code);
 
+    if (!product) {
+        notFound();
+    }
+
     return (
         <Stack>
             <Paper sx={{ p: 2 }}>
                 <Grid2 justifyContent="space-evenly" alignItems="center" spacing={2} rowGap={3} container>
-                    <Grid2 xs={12} sm={6} md={5} lg={4} sx={{ maxWidth: "60vh" }}>
+                    <Grid2 xs={12} sm={6} md={5} lg={4} sx={{ maxWidth: { xs: "40vh", sm: "50vw" } }}>
                         <Box sx={{ pb: "100%", position: "relative" }}>
                             <Image
                                 style={{ objectFit: "scale-down" }}
@@ -30,18 +40,22 @@ const ProductPage = ({ params: { code } }) => {
                         </Box>
                     </Grid2>
                     <Grid2 xs={12} sm={6} md={5} lg={4} sx={{ mt: 2 }}>
-                        <Typography variant="subtitle1" component="div" gutterBottom>
-                            <b>{product.name}</b>
-                        </Typography>
+                        <Stack direction="row" alignItems="center" spacing={2} sx={{ mb: 1 }}>
+                            <Typography variant="subtitle1">
+                                <b>{product.name}</b>
+                            </Typography>
+                            <Chip
+                                sx={{ display: product.new || product.popular ? "flex" : "none" }}
+                                label={product.popular ? "Populairst" : "Nieuw"}
+                                color="primary"
+                            />
+                        </Stack>
                         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                             {product.description}
                         </Typography>
-                        <Detail label="Kleur" value={product.color} />
-                        <Detail label="Lengte" value={product.length} />
-                        <Detail label="Gewict" value={product.weight} />
-                        <Detail label="Diameter" value={product.diameter} />
-                        <Detail label="matriaal" value={product.material} />
-                        
+                        {PRODUCT_DETAILS.map(({ label, field, getValue }) => (
+                            <Detail key={label} label={label} value={field ? product[field] : getValue(product)} />
+                        ))}
                         <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
                             {PRODUCT_TEXT}
                         </Typography>

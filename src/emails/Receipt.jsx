@@ -1,13 +1,13 @@
 import { Column, Heading, Hr, Img, Row, Section, Text } from "@react-email/components";
-import { RECEIPT_EMAIL_SUBJECT, RECEIPT_EMAIL_TEXT } from "@/config/constants";
 import { formatPrice, getProduct } from "@/utils/utils";
+import { RECEIPT_EMAIL_TEXT } from "@/config/constants";
 import TemplateEmail from "./Template";
 import format from "date-fns/format";
 import isEmpty from "lodash/isEmpty";
 import nl from "date-fns/locale/nl";
 
 export const ReceiptEmail = ({ checkout, shoppingCart, deliveryCosts }) => (
-    <TemplateEmail preview={`${checkout.firstName}, ${RECEIPT_EMAIL_SUBJECT}`}>
+    <TemplateEmail preview={RECEIPT_EMAIL_TEXT}>
         <Section style={message}>
             <Heading style={global.heading}>Bedankt voor je bestelling</Heading>
             <Text style={global.text}>Beste {checkout.firstName},</Text>

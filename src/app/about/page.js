@@ -1,32 +1,18 @@
-"use client";
-import { ABOUT_TEXT, WEBSHOP_DESCRIPTION } from "@/config/constants";
-import InstagramPosts from "@/molecules/InstagramPosts";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Image from "next/image";
+import { AMOUNT_INSTAGRAM_POSTS } from "@/config/constants";
+import About from "@/organisms/About";
+import "server-only";
 
-const AboutPage = () => (
-    <Grid2 container justifyContent="space-evenly" direction="row-reverse" alignItems="center" spacing={2} rowGap={3}>
-        <Grid2 xs={12} sm={6} md={5} lg={4}>
-            <Box sx={{ pb: "100%", position: "relative" }}>
-                <Image
-                    style={{ objectFit: "contain", borderRadius: "10%" }}
-                    alt={WEBSHOP_DESCRIPTION}
-                    src="/static/about.jpeg"
-                    fill
-                />
-            </Box>
-        </Grid2>
-        <Grid2 xs={12} sm={6} md={5} lg={4}>
-            <Typography variant="body1" sx={{ pb: 2 }}>
-                {ABOUT_TEXT}
-            </Typography>
-        </Grid2>
-        <Grid2 xs={12}>
-            <InstagramPosts />
-        </Grid2>
-    </Grid2>
-);
+export const revalidate = 10;
+
+const AboutPage = async () => {
+    const media = await fetch(
+        `https://graph.instagram.com/${process.env.INSTAGRAM_USER_ID}/media?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&fields=media_url,permalink,media_type`
+    );
+
+    const postsData = await media.json();
+    const posts = postsData.data.filter(({ media_type }) => media_type === "IMAGE").slice(0, AMOUNT_INSTAGRAM_POSTS);
+
+    return <About posts={posts} />;
+};
 
 export default AboutPage;

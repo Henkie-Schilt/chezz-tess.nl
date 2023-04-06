@@ -1,6 +1,5 @@
 "use client";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import { maxLength, required } from "@/utils/rules";
 import FormTextField from "@/atoms/FormTextField";
 import { checkoutFormAtom } from "@/utils/state";
 import { useWatch } from "react-hook-form";
@@ -18,58 +17,28 @@ const CheckoutForm = ({ control, resetField }) => {
     return (
         <Grid2 spacing={2} container>
             <Grid2 xs={12} sm={6}>
-                <FormTextField
-                    resetField={resetField}
-                    rules={{ required }}
-                    control={control}
-                    label="Voornaam"
-                    name="firstName"
-                />
+                <FormTextField resetField={resetField} required control={control} label="Voornaam" name="firstName" />
             </Grid2>
             <Grid2 xs={12} sm={6}>
-                <FormTextField
-                    resetField={resetField}
-                    rules={{ required }}
-                    label="Achternaam"
-                    control={control}
-                    name="lastName"
-                />
+                <FormTextField resetField={resetField} required control={control} label="Achternaam" name="lastName" />
             </Grid2>
             <Grid2 xs={12} md={4}>
-                <FormTextField
-                    resetField={resetField}
-                    rules={{ required }}
-                    control={control}
-                    label="Adres"
-                    name="street"
-                />
+                <FormTextField resetField={resetField} required control={control} label="Adres" name="street" />
             </Grid2>
             <Grid2 xs={12} md={4}>
-                <FormTextField
-                    resetField={resetField}
-                    rules={{ required }}
-                    control={control}
-                    label="Postcode"
-                    name="zip"
-                />
+                <FormTextField resetField={resetField} required control={control} label="Postcode" name="zip" />
             </Grid2>
             <Grid2 xs={12} md={4}>
-                <FormTextField
-                    resetField={resetField}
-                    rules={{ required }}
-                    control={control}
-                    label="Plaats"
-                    name="city"
-                />
+                <FormTextField resetField={resetField} required control={control} label="Plaats" name="city" />
             </Grid2>
             <Grid2 xs={12}>
                 <FormTextField
                     resetField={resetField}
-                    rules={{ required }}
                     control={control}
                     label="E-mail"
                     name="email"
                     type="email"
+                    required
                 />
             </Grid2>
             <Grid2 xs={12}>
@@ -82,14 +51,7 @@ const CheckoutForm = ({ control, resetField }) => {
                 />
             </Grid2>
             <Grid2 xs={12}>
-                <FormTextField
-                    rules={{ maxLength: maxLength(250) }}
-                    resetField={resetField}
-                    label="Opmerkingen"
-                    control={control}
-                    name="remarks"
-                    multiline
-                />
+                <FormTextField resetField={resetField} control={control} label="Opmerkingen" name="remarks" multiline />
             </Grid2>
         </Grid2>
     );

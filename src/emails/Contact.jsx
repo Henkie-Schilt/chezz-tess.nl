@@ -1,11 +1,11 @@
 import { Column, Heading, Hr, Row, Section, Text } from "@react-email/components";
-import { CONTACT_EMAIL_SUBJECT, CONTACT_EMAIL_TEXT } from "@/config/constants";
+import { CONTACT_EMAIL_TEXT } from "@/config/constants";
 import TemplateEmail from "./Template";
 import format from "date-fns/format";
 import nl from "date-fns/locale/nl";
 
 export const ContactEmail = ({ contact }) => (
-    <TemplateEmail preview={`${contact.firstName}, ${CONTACT_EMAIL_SUBJECT}`}>
+    <TemplateEmail preview={CONTACT_EMAIL_TEXT}>
         <Section style={message}>
             <Heading style={global.heading}>Bedankt voor je bericht</Heading>
             <Text style={global.text}>Beste {contact.firstName},</Text>

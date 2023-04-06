@@ -15,7 +15,7 @@ const formatter = new Intl.NumberFormat("nl-NL", {
 });
 
 export const getRelatedProducts = (code) =>
-    reject(filter(products, ["category", getProduct(code).category]), ["code", code]);
+    reject(filter(products, ["category", getProduct(code)?.category]), ["code", code]);
 export const getProductTokens = () => uniq(flatMap(map(products, "tokens")));
 export const getProduct = (code) => find(products, ["code", code]);
 export const formatPrice = (price) => formatter.format(price);

@@ -11,7 +11,7 @@ export const generateMetadata = ({ params: { code } }) => {
         icons: {
             icon: "/static/logo.png",
         },
-        keywords: product.tokens,
+        keywords: product?.tokens,
     };
 };
 

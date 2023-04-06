@@ -1,26 +1,21 @@
 export const WEBSHOP_DESCRIPTION = "Handgemaakte sierade, kaarsen, armbanden en meer van Tessa";
- 
 export const WEBSHOP_URL = "www.chezz-tess.nl";
 export const WEBSHOP_NAME = "Chezz-Tess";
- 
+
 export const WEBSHOP_PRIMARY_COLOR = "#95C2BD";
 export const WEBSHOP_SECONDARY_COLOR = "#000000";
 export const WEBSHOP_BACKGROUND_COLOR = "#f2f2f2"; 
 export const WEBSHOP_WHITE_COLOR = "#FFFFFF"; 
 
- 
 
 export const RECEIPT_EMAIL_SUBJECT = "Bedankt voor je bestelling bij Chezz Tess"; 
 export const CONTACT_EMAIL_SUBJECT = "Bedankt voor je bericht aan Chezz Tess";
 export const RECEIPT_EMAIL_TEXT = "Leuk dat je een bestelling hebt gedaan bij Chezz Tess! Je ontvangt binnen een paar dagen een factuur. Zou je zo vriendelijk willen zijn het bedrag zo spoedig mogelijk over te maken? Dan kunnen wij het pakketje jouw kant op sturen. Bedankt voor je bestelling en vertrouwen!"; 
 export const CONTACT_EMAIL_TEXT = "Bedankt voor je bericht! Hieronder vindt je een overzicht van je bericht. We streven ernaar om je bericht binnen 5 werkdagen te beantwoorden!";
-
+export const EMAIL_RECOMMENDED_PRODUCTS = "Favorieten";
 
 export const GMAIL_USERNAME = "chezz.tess@gmail.com";
 export const INSTAGRAM_USERNAME = "chezz.tess";
-export const INSTAGRAM_USERNAME_TEST="Chezz~Tess";
- 
- 
 
 export const CHECKOUT_SUCCESS_TOAST =
     "Bedankt voor je bestelling! De factuur van je bestelling vindt je binnen een paar dagen in je inbox.";
@@ -30,8 +25,15 @@ export const CONTACT_SUCCESS_TOAST =
     "Bedankt voor je bericht! We hopen zo spoedig mogelijk contact met je op te nemen."; 
 export const CONTACT_ERROR_TOAST =
     "Helaas is er iets misgegaan bij het verzenden. Neem contact op door een e-mail te sturen naar chezz.tess@gmail.com met een screenshot van je bericht";
+
 export const AMOUNT_INSTAGRAM_POSTS = 6;
- 
+
+export const PRODUCT_DETAILS = [
+    { label: "Formaat", field: "format" },
+    { label: "Kleur", field: "color" },
+    { label: "Papier", field: "paper" },
+    { label: "Hoeken", getValue: ({ roundCorners }) => (roundCorners ? "Rond" : "Rechthoek") },
+];
 
 export const DELIVERY__COSTS_TEXT = (
     <span>
@@ -46,10 +48,8 @@ export const DELIVERY__COSTS_TEXT = (
  
 
 export const PRODUCT_TEXT = (
-    <span>  </span>
+    <span></span>
 );
- 
- 
 
 export const CONTACT_TEXT = (
     <span>
@@ -57,7 +57,6 @@ export const CONTACT_TEXT = (
         Natuurlijk mag je ook altijd mailen naar <b>chezz.tess@gmail.com</b>.
     </span>
 );
- 
  
 
 export const ABOUT_TEXT = (
@@ -76,7 +75,3 @@ export const ABOUT_TEXT = (
     </span>
  
 );
-
-
-
-

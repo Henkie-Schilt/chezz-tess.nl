@@ -5,11 +5,23 @@ import ClearIcon from "@mui/icons-material/Clear";
 import TextField from "@mui/material/TextField";
 import { Controller } from "react-hook-form";
 
-const FormTextField = ({ control, resetField, label, name, rules = {}, type = "text", multiline = false }) => (
+const FormTextField = ({
+    multiline = false,
+    required = false,
+    maxLength = 250,
+    type = "text",
+    resetField,
+    control,
+    label,
+    name,
+}) => (
     <Controller
+        rules={{
+            maxLength: { value: maxLength, message: `Maximaal ${maxLength} tekens` },
+            required: { value: required, message: "Dit is een verplicht veld" },
+        }}
         control={control}
         defaultValue=""
-        rules={rules}
         name={name}
         render={({ field: { onChange, onBlur, value }, fieldState: { invalid, error } }) => (
             <TextField
@@ -25,6 +37,7 @@ const FormTextField = ({ control, resetField, label, name, rules = {}, type = "t
                 minRows={multiline ? 4 : null}
                 helperText={error?.message}
                 multiline={multiline}
+                required={required}
                 onChange={onChange}
                 error={invalid}
                 onBlur={onBlur}
