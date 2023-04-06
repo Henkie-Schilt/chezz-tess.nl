@@ -98,7 +98,7 @@ export const products = [
         price: 9.99,
         color: "Blauw - Paars - Turqouise",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
         tokens: [
@@ -120,7 +120,7 @@ export const products = [
         price: 9.99,
         color: "Geel - Mint Groen - Roze",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
         tokens: [
@@ -142,7 +142,7 @@ export const products = [
         price: 9.99,
         color: "Geel - Turquoise - Paars - Blauw",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
         tokens: [
@@ -164,7 +164,7 @@ export const products = [
         price: 9.99,
         color: "Goud - Oker - Bronze",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
         tokens: [
@@ -186,7 +186,7 @@ export const products = [
         price: 9.99,
         color: "Paars",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
         tokens: [
@@ -208,7 +208,7 @@ export const products = [
         price: 9.99,
         color: "Rood - Roze - Groen - Geel",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: true,
         popular: false,
         tokens: [
@@ -230,7 +230,7 @@ export const products = [
         price: 9.99,
         color: "Roze - Groen - Goud - Blauw - Geel",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: true,
         popular: false,
         tokens: [
@@ -252,7 +252,7 @@ export const products = [
     price: 9.99,
     color: "Roze",
     matriaal: "RVS",
-    new: true,
+    new: false,
     recommended: true,
     popular: false,
     tokens: [
@@ -274,7 +274,7 @@ export const products = [
         price: 9.99,
         color: "Blauw - Wit - Roze - Goud",
         matriaal: "RVS",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
         tokens: [
@@ -299,7 +299,7 @@ export const products = [
             color: "Turquoise - Geel ",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -322,7 +322,7 @@ export const products = [
             color: "Blauw - Wit",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -345,7 +345,7 @@ export const products = [
             color: "Geel - Oranje",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -368,7 +368,7 @@ export const products = [
             color: "Geel - Roze",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -391,7 +391,7 @@ export const products = [
             color: "Oranje - Magenta",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -414,7 +414,7 @@ export const products = [
             color: "Roze - Magenta",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -437,7 +437,7 @@ export const products = [
             color: "Roze - Oranje",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -460,7 +460,7 @@ export const products = [
             color: "Roze - Oranje",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -483,7 +483,7 @@ export const products = [
             color: "Turquoise - Magenta",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [
@@ -506,7 +506,7 @@ export const products = [
             color: "Zilver - Magenta",
             weight: "66 gram",
             diameter: "3 Centimeter",
-        new: true,
+        new: false,
         recommended: false,
         popular: false,
             tokens: [

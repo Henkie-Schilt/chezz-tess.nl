@@ -2,7 +2,7 @@ import { AMOUNT_INSTAGRAM_POSTS } from "@/config/constants";
 import About from "@/organisms/About";
 import "server-only";
 
-export const revalidate = 10;
+export const revalidate = 3600;
 
 const AboutPage = async () => {
     const media = await fetch(
