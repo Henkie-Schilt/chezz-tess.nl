@@ -119,7 +119,7 @@ const global = {
         ...paddingY,
     },
     heading: {
-        letterSpacing: "-1px",
+        letterSpacing: "1px",
         textAlign: "center",
         fontWeight: "700",
         lineHeight: "1.3",

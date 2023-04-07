@@ -31,8 +31,10 @@ export const AMOUNT_INSTAGRAM_POSTS = 6;
 export const PRODUCT_DETAILS = [
     { label: "Formaat", field: "format" },
     { label: "Kleur", field: "color" },
-    { label: "Papier", field: "paper" },
-    { label: "Hoeken", getValue: ({ roundCorners }) => (roundCorners ? "Rond" : "Rechthoek") },
+    { label: "Matriaal", field: "matriaal" },
+    { label: "Gewicht", field: "weight" },
+    { label: "Lengte", field: "length" },
+    { label: "Diameter", field: "diameter" }
 ];
 
 export const DELIVERY__COSTS_TEXT = (
