@@ -126,11 +126,7 @@ const CheckoutPage = () => {
                 justifyContent="flex-end"
                 container
             >
-                <Typography
-                    sx={{ backgroundColor: (theme) => theme.palette.background.default, width: "100%", p: 1 }}
-                    variant="subtitle2"
-                    align="right"
-                >
+                <Typography sx={{ width: "100%", p: 1 }} variant="subtitle2" align="right">
                     <b>Totaal: {formatPrice(totalPrice)}</b>
                 </Typography>
                 <Button
@@ -190,11 +186,12 @@ const CheckoutPage = () => {
                                 theme: "colored",
                                 autoClose: 5000,
                             });
-
-                            setIsSubmitting(false);
                         }
+
+                        setIsSubmitting(false);
                     }}
                     sx={{ display: activeStep !== checkoutSteps.length - 1 ? "none" : "flex" }}
+                    disabled={isSubmitting}
                     variant="contained"
                     color="secondary"
                 >

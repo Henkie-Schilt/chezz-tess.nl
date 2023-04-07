@@ -1,16 +1,16 @@
 "use client";
-import { formatPrice, getProduct } from "@/utils/utils";
+import { useProduct, useShoppingCartItemAmount } from "@/utils/hooks";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import ShoppingCartAmount from "./ShoppingCartAmount";
-import { useShoppingCartItem } from "@/utils/hooks";
 import Typography from "@mui/material/Typography";
+import { formatPrice } from "@/utils/utils";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 
 const ShoppingCartItem = ({ code, editable }) => {
-    const [amount] = useShoppingCartItem(code);
-    const product = getProduct(code);
+    const amount = useShoppingCartItemAmount(code);
+    const product = useProduct(code);
 
     return (
         <Grid2 container justifyContent="flex-start" alignItems="center" sx={{ width: "100%" }}>

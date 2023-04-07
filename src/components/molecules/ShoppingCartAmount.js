@@ -2,19 +2,25 @@
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { motion, useAnimationControls } from "framer-motion";
+import { useShoppingCartItemAmount } from "@/utils/hooks";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { shockwave, wiggle } from "@/utils/animations";
 import { Controller, useForm } from "react-hook-form";
-import { useShoppingCartItem } from "@/utils/hooks";
 import IconButton from "@mui/material/IconButton";
+import { shoppingCartAtom } from "@/utils/state";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import isEmpty from "lodash/isEmpty";
+import reject from "lodash/reject";
+import concat from "lodash/concat";
 import { useEffect } from "react";
+import { useAtom } from "jotai";
 
 const ShoppingCartAmount = ({ code, buttons }) => {
-    const [amount, add, update, remove] = useShoppingCartItem(code);
+    const amount = useShoppingCartItemAmount(code);
+
     const { control, setValue, handleSubmit, reset } = useForm({ mode: "onChange", defaultValues: { amount } });
+    const [shoppingCart, setShoppingCart] = useAtom(shoppingCartAtom);
     const animation = useAnimationControls();
 
     useEffect(() => setValue("amount", amount), [setValue, amount]);
@@ -33,7 +39,11 @@ const ShoppingCartAmount = ({ code, buttons }) => {
                         <TextField
                             onBlur={() => {
                                 if (!isEmpty(amount) && !invalid) {
-                                    update(parseInt(value));
+                                    setShoppingCart(
+                                        shoppingCart.map((item) =>
+                                            item.code === code ? { code, amount: parseInt(value) } : item
+                                        )
+                                    );
                                 } else if (isEmpty(amount) && !invalid && isDirty) {
                                     animation.start(buttons ? shockwave(1.04) : wiggle);
                                 } else if (isEmpty(amount) && isEmpty(value)) {
@@ -58,20 +68,27 @@ const ShoppingCartAmount = ({ code, buttons }) => {
             </Grid2>
             <Grid2 xs="auto" sx={{ display: !buttons && isEmpty(amount) ? "flex" : "none", p: 0 }}>
                 <motion.div animate={animation}>
-                    <IconButton onClick={handleSubmit((formValues) => add(formValues.amount))} size="large">
+                    <IconButton
+                        onClick={handleSubmit((formValues) =>
+                            setShoppingCart(concat(shoppingCart, { code, amount: parseInt(formValues.amount) }))
+                        )}
+                        size="large"
+                    >
                         <AddShoppingCartIcon fontSize="medium" />
                     </IconButton>
                 </motion.div>
             </Grid2>
             <Grid2 xs="auto" sx={{ display: !buttons && !isEmpty(amount) ? "flex" : "none", p: 0 }}>
-                <IconButton onClick={() => remove()} size="large">
+                <IconButton onClick={() => setShoppingCart(reject(shoppingCart, ["code", code]))} size="large">
                     <DeleteOutlineOutlinedIcon fontSize="medium" />
                 </IconButton>
             </Grid2>
             <Grid2 xs={12} sx={{ display: buttons && isEmpty(amount) ? "flex" : "none" }}>
                 <motion.div animate={animation} style={{ width: "100%" }}>
                     <Button
-                        onClick={handleSubmit((formValues) => add(formValues.amount))}
+                        onClick={handleSubmit((formValues) =>
+                            setShoppingCart(concat(shoppingCart, { code, amount: parseInt(formValues.amount) }))
+                        )}
                         variant="contained"
                         color="secondary"
                         size="large"
@@ -82,7 +99,13 @@ const ShoppingCartAmount = ({ code, buttons }) => {
                 </motion.div>
             </Grid2>
             <Grid2 xs={12} sx={{ display: buttons && !isEmpty(amount) ? "flex" : "none" }}>
-                <Button onClick={() => remove()} variant="contained" color="secondary" size="large" fullWidth>
+                <Button
+                    onClick={() => setShoppingCart(reject(shoppingCart, ["code", code]))}
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                    fullWidth
+                >
                     Verwijderen
                 </Button>
             </Grid2>

@@ -152,10 +152,3 @@ const message = {
     padding: "40px 74px",
     textAlign: "center",
 };
-
-const adressTitle = {
-    margin: "0",
-    lineHeight: "2",
-    fontSize: "15px",
-    fontWeight: "bold",
-};

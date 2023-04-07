@@ -37,6 +37,18 @@ export const PRODUCT_DETAILS = [
     { label: "Diameter", field: "diameter" }
 ];
 
+
+export const HOME_CAROUSEL = ["001", "002", "003", "004"];
+
+export const HOME_TEXT = (
+    <span>
+        Super leuk dat je een kijkje neemt op mijn website! In de webshop vind je zelf gemaakte oorbellen, kaarsen en meer. 
+        Kijk op je gemak ronde als je vragen hebt kune je altijd contact met me opnemen via de contactpagina.{" "}
+
+    </span>
+);
+
+
 export const DELIVERY__COSTS_TEXT = (
     <span>
         Als één van de volgende opties voor jou van toepassing is, kun je deze optie aanvinken en gelden er geen
@@ -59,7 +71,8 @@ export const CONTACT_TEXT = (
         Natuurlijk mag je ook altijd mailen naar <b>chezz.tess@gmail.com</b>.
     </span>
 );
- 
+
+
 
 export const ABOUT_TEXT = (
     <span>

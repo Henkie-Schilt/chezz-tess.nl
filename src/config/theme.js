@@ -20,6 +20,8 @@ export const theme = createTheme({
                 body: {
                     "--toastify-color-success": WEBSHOP_PRIMARY_COLOR,
                     "--toastify-color-error": WEBSHOP_SECONDARY_COLOR,
+                    "--swiper-pagination-color": WEBSHOP_SECONDARY_COLOR,
+                    "--swiper-navigation-color": WEBSHOP_SECONDARY_COLOR,
                     scrollbarColor: "#6b6b6b transparent",
                     "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
                         backgroundColor: "transparent",

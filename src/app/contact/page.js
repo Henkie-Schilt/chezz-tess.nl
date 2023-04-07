@@ -70,6 +70,7 @@ const ContactPage = () => {
 
                         setIsSubmitting(false);
                     })}
+                    disabled={isSubmitting}
                     variant="contained"
                     color="secondary"
                     size="large"

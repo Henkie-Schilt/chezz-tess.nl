@@ -7,11 +7,12 @@ import products from "@/config/products";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import sample from "lodash/sample";
+import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const ProductNotFound = () => {
-    const product = sample(products);
+    const product = useMemo(() => sample(products), []);
 
     return (
         <Grid2

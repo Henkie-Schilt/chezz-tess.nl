@@ -11,6 +11,7 @@ export const products = [
         color: "Wit - Blauw",
         matriaal: "RVS",
         new: true,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -33,6 +34,7 @@ export const products = [
         color: "Wit - Blauw",
         matriaal: "RVS",
         new: true,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -55,6 +57,7 @@ export const products = [
         color: "Wit - Blauw",
         matriaal: "RVS",
         new: true,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -76,7 +79,8 @@ export const products = [
         price: 6.99,
         color: "Wit - Blauw",
         matriaal: "RVS",
-        new: true,
+        new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -99,6 +103,7 @@ export const products = [
         color: "Blauw - Paars - Turqouise",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -121,6 +126,7 @@ export const products = [
         color: "Geel - Mint Groen - Roze",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -143,6 +149,7 @@ export const products = [
         color: "Geel - Turquoise - Paars - Blauw",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -165,6 +172,7 @@ export const products = [
         color: "Goud - Oker - Bronze",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -187,6 +195,7 @@ export const products = [
         color: "Paars",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -209,6 +218,7 @@ export const products = [
         color: "Rood - Roze - Groen - Geel",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: true,
         popular: false,
         tokens: [
@@ -231,6 +241,7 @@ export const products = [
         color: "Roze - Groen - Goud - Blauw - Geel",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: true,
         popular: false,
         tokens: [
@@ -275,6 +286,7 @@ export const products = [
         color: "Blauw - Wit - Roze - Goud",
         matriaal: "RVS",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
         tokens: [
@@ -300,6 +312,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -323,6 +336,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -346,6 +360,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -369,6 +384,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -392,6 +408,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -415,6 +432,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -438,7 +456,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
-        recommended: false,
+        extraPictures: [],        recommended: false,
         popular: false,
             tokens: [
                 "Kaars",
@@ -461,6 +479,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -484,6 +503,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
@@ -507,6 +527,7 @@ export const products = [
             weight: "66 gram",
             diameter: "3 Centimeter",
         new: false,
+        extraPictures: [],        
         recommended: false,
         popular: false,
             tokens: [
