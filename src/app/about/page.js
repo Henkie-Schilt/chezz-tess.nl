@@ -10,7 +10,7 @@ const AboutPage = async () => {
     );
 
     const postsData = await media.json();
-    const posts = postsData.data.filter(({ media_type }) => media_type === "IMAGE").slice(0, AMOUNT_INSTAGRAM_POSTS);
+    const posts = postsData.data.filter(({ media_type }) => media_type === "IMAGE").slice(0, 6);
 
     return <About posts={posts} />;
 };
