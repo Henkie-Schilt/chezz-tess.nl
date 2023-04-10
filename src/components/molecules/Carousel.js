@@ -19,7 +19,7 @@ const Carousel = ({ pictures }) => {
         <Stack>
             <Stack
                 direction="row"
-                sx={{ position: "relative", width: { xs: "25em", md: "30em", lg: "35em" }, maxWidth: "80vw" }}
+                sx={{ position: "relative", width: { xs: "25em", md: "30em", lg: "30em" }, maxWidth: "80vw" }}
             >
                 <Fab
                     sx={{

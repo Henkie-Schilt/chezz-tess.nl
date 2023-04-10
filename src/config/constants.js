@@ -43,7 +43,7 @@ export const HOME_CAROUSEL = ["001", "002", "003", "004"];
 export const HOME_TEXT = (
     <span>
         Super leuk dat je een kijkje neemt op mijn website! In de webshop vind je zelf gemaakte oorbellen, kaarsen en meer. 
-        Kijk op je gemak ronde als je vragen hebt kune je altijd contact met me opnemen via de contactpagina.{" "}
+        Kijk op je gemak rond als je vragen hebt kun je altijd contact met me opnemen via de contactpagina.{" "}
 
     </span>
 );
@@ -81,7 +81,7 @@ export const ABOUT_TEXT = (
         <br /> 
          Ik ben Tessa. Ik maak al een tijdje allerlei leuke dingen zoals kaarsen en sieraden.
             Ook vond het tijd om dit met de wereld te gaan delen.
-            Op dit account zullen verschillende foto’s geplaatst worden.
+            Op deze website zullen verschillende producten verkocht worden, volg me ook op social media om op de hoogte te blijven.
 
 <br />
 
