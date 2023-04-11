@@ -219,7 +219,7 @@ export const products = [
         matriaal: "RVS",
         new: false,
         extraPictures: [],        
-        recommended: true,
+        recommended: false,
         popular: false,
         tokens: [
             "Oorbellen",
@@ -505,7 +505,7 @@ export const products = [
             diameter: "3 Centimeter",
             new: false,
             extraPictures: [],        
-            recommended: false,
+            recommended: true,
             popular: false,
             tokens: [
                 "Kaars",

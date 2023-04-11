@@ -38,7 +38,7 @@ export const PRODUCT_DETAILS = [
 ];
 
 
-export const HOME_CAROUSEL = ["001", "002", "003", "004"];
+export const HOME_CAROUSEL = ["Home1", "Home2", "Home3", "Home4", "Home5"];
 
 export const HOME_TEXT = (
     <span>
