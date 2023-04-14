@@ -41,7 +41,7 @@ export const TemplateEmail = ({ children, preview }) => (
                 <Section style={paddingY}>
                     <Text style={global.heading}>{EMAIL_RECOMMENDED_PRODUCTS}</Text>
                     <Row style={recommended.container}>
-                        {filter(products, ["recommended", true]).map(({ code, name, description }) => (
+                        {filter(products, ["recommended", true]).map(({ code, name }) => (
                             <Column
                                 style={{ ...recommended.product, paddingLeft: "4px", width: "31%" }}
                                 align="center"
@@ -54,7 +54,6 @@ export const TemplateEmail = ({ children, preview }) => (
                                         alt={name}
                                     />
                                     <Text style={recommended.title}>{name}</Text>
-                                    <Text style={recommended.text}>{description}</Text>
                                 </Link>
                             </Column>
                         ))}
