@@ -6,6 +6,7 @@ export const WEBSHOP_PRIMARY_COLOR = "#95C2BD";
 export const WEBSHOP_SECONDARY_COLOR = "#000000";
 export const WEBSHOP_BACKGROUND_COLOR = "#f2f2f2"; 
 export const WEBSHOP_WHITE_COLOR = "#FFFFFF"; 
+export const WEBSHOP_BLACK_COLOR = "#000000"; 
 
 
 export const RECEIPT_EMAIL_SUBJECT = "Bedankt voor je bestelling bij Chezz Tess"; 

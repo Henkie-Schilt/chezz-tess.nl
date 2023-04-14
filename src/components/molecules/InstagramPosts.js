@@ -19,7 +19,7 @@ const InstagramPosts = ({ posts }) => (
                 <IconButton size="large">
                     <InstagramIcon sx={{ width: "1.5em", height: "1.5em" }} />
                 </IconButton>
-                <Typography variant="h5" color="text.secondary" sx={{ fontFamily: "Courgette" }}>
+                <Typography variant="h5" color="text.secondary" sx={{ fontFamily: "Raleway" }}>
                     {INSTAGRAM_USERNAME}
                 </Typography>
             </Stack>
@@ -31,13 +31,13 @@ const InstagramPosts = ({ posts }) => (
                         border: (theme) => `3px solid ${theme.palette.primary.main}`,
                         width: { xs: "200px", sm: "250px", md: "350px" },
                         position: "relative",
-                        borderRadius: "50%",
+                        borderRadius: "40%",
                         maxWidth: "80vw",
                         pb: "100%",
                     }}
                 >
                     <Image
-                        style={{ margin: "auto", borderwidth: "170px", borderRadius: "50%" }}
+                        style={{ margin: "auto", borderwidth: "170px", borderRadius: "40%" }}
                         alt="Instagram post"
                         src={media_url}
                         fill
