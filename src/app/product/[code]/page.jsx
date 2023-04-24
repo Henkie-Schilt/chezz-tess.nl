@@ -2,9 +2,10 @@
 import { PRODUCT_DETAILS, PRODUCT_TEXT } from "@/config/constants";
 import ShoppingCartAmount from "@/molecules/ShoppingCartAmount";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import ProductCard from "@/molecules/ProductCard";
+import ProductCard from "@/organisms/ProductCard";
 import Typography from "@mui/material/Typography";
 import { formatPrice } from "@/utils/utils";
+import Carousel from "@/molecules/Carousel";
 import { useProduct } from "@/utils/hooks";
 import { notFound } from "next/navigation";
 import products from "@/config/products";
@@ -12,12 +13,10 @@ import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 import Chip from "@mui/material/Chip";
 import Detail from "@/atoms/Detail";
-import Box from "@mui/material/Box";
+import Crumbs from "@/atoms/Crumbs";
 import reject from "lodash/reject";
 import filter from "lodash/filter";
 import { useMemo } from "react";
-import Image from "next/image";
-import Carousel from "@/molecules/Carousel";
 
 export const dynamicParams = false;
 export const generateStaticParams = () => products.map(({ code }) => ({ code }));
@@ -36,10 +35,17 @@ const ProductPage = ({ params: { code } }) => {
 
     return (
         <Stack>
-            <Paper sx={{ p: 2 }}>
-                <Grid2 justifyContent="space-evenly" alignItems="center" spacing={2} rowGap={3} container>
+            <Crumbs
+                crumbs={[
+                    { label: "Chezz Tess", href: "/" },
+                    { label: "Webshop", href: "/webshop" },
+                    { label: code, href: `/product/${code}` },
+                ]}
+            />
+            <Paper sx={{ p: 2, my: 2 }}>
+                <Grid2 container justifyContent="space-evenly" alignItems="center" spacing={2} rowGap={3}>
                     <Grid2 xs="auto">
-                        <Carousel pictures={[code, ...product.extraPictures]} />
+                        <Carousel pictures={[code, ...product.extraPictures]} width="30em" />
                     </Grid2>
                     <Grid2 xs={12} sm={10} md={8} lg={5} sx={{ mt: 2 }}>
                         <Stack direction="row" alignItems="center" spacing={2} sx={{ mb: 1 }}>

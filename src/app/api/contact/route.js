@@ -13,7 +13,7 @@ export async function POST(request) {
             secure: true,
             port: 465,
             auth: {
-                user: GMAIL_USERNAME,
+                user: process.env.GMAIL_USERNAME,
                 pass: process.env.GMAIL_APP_PASSWORD,
             },
         });

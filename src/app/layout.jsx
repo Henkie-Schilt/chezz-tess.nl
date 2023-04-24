@@ -5,11 +5,11 @@ import { ToastContainer } from "react-toastify";
 import { CacheProvider } from "@emotion/react";
 import "react-toastify/dist/ReactToastify.css";
 import createCache from "@emotion/cache";
-import Header from "@/organisms/Header";
-import Footer from "@/molecules/Footer";
 import Box from "@mui/material/Box";
 import theme from "@/config/theme";
 import { Provider } from "jotai";
+import Footer from "./Footer";
+import Header from "./Header";
 import "./globals.css";
 
 const initialEmotionCache = createCache({ key: "css", prepend: true });

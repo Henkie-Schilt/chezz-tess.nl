@@ -13,6 +13,7 @@ import ContactForm from "@/forms/Contact";
 import Button from "@mui/material/Button";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import Crumbs from "@/atoms/Crumbs";
 import { useState } from "react";
 import { useAtom } from "jotai";
 import pick from "lodash/pick";
@@ -27,18 +28,24 @@ const ContactPage = () => {
     });
 
     return (
-        <Grid2 container maxWidth="md" spacing={2} sx={{ mx: "auto" }}>
+        <Grid2 container maxWidth="md" justifyContent="center" spacing={2} sx={{ mx: "auto" }}>
+            <Crumbs
+                crumbs={[
+                    { label: "Chezz Tess", href: "/" },
+                    { label: "Contact", href: "/contact" },
+                ]}
+            />
             <Backdrop sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} open={isSubmitting}>
                 <CircularProgress color="primary" />
             </Backdrop>
-            <Grid2 xs={12} sx={{ mb: 2 }}>
+            <Grid2 xs={12} sx={{ my: 2 }}>
                 {ContactElement}
-                <Typography variant="body2" sx={{ my: 2 }}>
+                <Typography variant="body2" sx={{ my: 4 }}>
                     {CONTACT_TEXT}
                 </Typography>
             </Grid2>
             <ContactForm control={control} resetField={resetField} />
-            <Grid2 xs={12}>
+            <Grid2 xs={12} maxWidth="sm" sx={{ mt: 2 }}>
                 <Button
                     onClick={handleSubmit(async (data) => {
                         setIsSubmitting(true);

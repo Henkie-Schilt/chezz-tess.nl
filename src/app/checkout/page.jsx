@@ -9,6 +9,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import CheckCircleTwoToneIcon from "@mui/icons-material/CheckCircleTwoTone";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
+import ShoppingCartOverview from "@/organisms/ShoppingCartOverview";
 import { useDeliveryCosts, useTotalPrice } from "@/utils/hooks";
 import CircularProgress from "@mui/material/CircularProgress";
 import { formatPrice, mergeObjects } from "@/utils/utils";
@@ -18,7 +19,6 @@ import Typography from "@mui/material/Typography";
 import StepLabel from "@mui/material/StepLabel";
 import Backdrop from "@mui/material/Backdrop";
 import CheckoutForm from "@/forms/Checkout";
-import Overview from "@/organisms/Overview";
 import Stepper from "@mui/material/Stepper";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -27,6 +27,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { toast } from "react-toastify";
 import Step from "@mui/material/Step";
+import Crumbs from "@/atoms/Crumbs";
 import { useAtom } from "jotai";
 import pick from "lodash/pick";
 
@@ -34,19 +35,19 @@ export const checkoutSteps = [
     {
         activeIcon: <ShoppingCartOutlinedIcon color="secondary" />,
         completedIcon: <ShoppingCartTwoToneIcon color="primary" />,
-        defaultIcon: <ShoppingCartTwoToneIcon color="disabled" />,
+        defaultIcon: <ShoppingCartOutlinedIcon color="disabled" />,
         label: "Producten",
     },
     {
         activeIcon: <LocationOnOutlinedIcon color="secondary" />,
         completedIcon: <LocationOnTwoToneIcon color="primary" />,
-        defaultIcon: <LocationOnTwoToneIcon color="disabled" />,
+        defaultIcon: <LocationOnOutlinedIcon color="disabled" />,
         label: "Je gegevens",
     },
     {
         activeIcon: <CheckCircleOutlinedIcon color="secondary" />,
         completedIcon: <CheckCircleTwoToneIcon color="primary" />,
-        defaultIcon: <CheckCircleTwoToneIcon color="disabled" />,
+        defaultIcon: <CheckCircleOutlinedIcon color="disabled" />,
         label: "Overzicht",
     },
 ];
@@ -71,10 +72,16 @@ const CheckoutPage = () => {
 
     return (
         <Stack maxWidth="lg" justifyContent="center" sx={{ mx: "auto" }}>
+            <Crumbs
+                crumbs={[
+                    { label: "Chezz Tess", href: "/" },
+                    { label: "Afronden", href: "/checkout" },
+                ]}
+            />
             <Backdrop sx={{ zIndex: (theme) => theme.zIndex.drawer + 3 }} open={isSubmitting}>
                 <CircularProgress color="primary" />
             </Backdrop>
-            <Stepper alternativeLabel activeStep={activeStep}>
+            <Stepper alternativeLabel activeStep={activeStep} sx={{ mt: 3 }}>
                 {checkoutSteps.map(({ label, completedIcon, activeIcon, defaultIcon }) => (
                     <Step
                         key={label}
@@ -111,7 +118,7 @@ const CheckoutPage = () => {
                 <CheckoutForm control={control} resetField={resetField} />
             </Grid2>
             <Grid2 xs={12} justifyContent="center" sx={{ display: activeStep === 2 ? "flex" : "none" }}>
-                <Overview />
+                <ShoppingCartOverview />
             </Grid2>
             <Grid2
                 sx={{
@@ -134,6 +141,7 @@ const CheckoutPage = () => {
                     onClick={() => setActiveStep(activeStep - 1)}
                     variant="outlined"
                     color="secondary"
+                    size="large"
                 >
                     Vorige
                 </Button>
@@ -148,6 +156,7 @@ const CheckoutPage = () => {
                     }}
                     variant="contained"
                     color="secondary"
+                    size="large"
                 >
                     Volgende
                 </Button>
@@ -194,6 +203,7 @@ const CheckoutPage = () => {
                     disabled={isSubmitting}
                     variant="contained"
                     color="secondary"
+                    size="large"
                 >
                     Bestellen
                 </Button>

@@ -15,7 +15,7 @@ const ContactForm = ({ control, resetField }) => {
     }, [setContactFormData, contactFormData]);
 
     return (
-        <Grid2 container>
+        <Grid2 container spacing={1} rowGap={1}>
             <Grid2 xs={12} sm={6} md={4}>
                 <FormTextField resetField={resetField} required control={control} label="Voornaam" name="firstName" />
             </Grid2>

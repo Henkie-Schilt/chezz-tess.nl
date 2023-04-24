@@ -54,6 +54,13 @@ const ShoppingCartAmount = ({ code, buttons }) => {
 
                                 onBlur();
                             }}
+                            sx={{
+                                "& label": { paddingLeft: (theme) => theme.spacing(2) },
+                                "& input": { paddingLeft: (theme) => theme.spacing(3.5) },
+                                "& fieldset": {
+                                    paddingLeft: (theme) => theme.spacing(2.5),
+                                },
+                            }}
                             helperText={error?.message}
                             onChange={onChange}
                             error={invalid}
@@ -83,7 +90,7 @@ const ShoppingCartAmount = ({ code, buttons }) => {
                     <DeleteOutlineOutlinedIcon fontSize="medium" />
                 </IconButton>
             </Grid2>
-            <Grid2 xs={12} sx={{ display: buttons && isEmpty(amount) ? "flex" : "none" }}>
+            <Grid2 xs={12} sx={{ display: buttons && isEmpty(amount) ? "flex" : "none", mt: 1 }}>
                 <motion.div animate={animation} style={{ width: "100%" }}>
                     <Button
                         onClick={handleSubmit((formValues) =>
@@ -98,7 +105,7 @@ const ShoppingCartAmount = ({ code, buttons }) => {
                     </Button>
                 </motion.div>
             </Grid2>
-            <Grid2 xs={12} sx={{ display: buttons && !isEmpty(amount) ? "flex" : "none" }}>
+            <Grid2 xs={12} sx={{ display: buttons && !isEmpty(amount) ? "flex" : "none", mt: 1 }}>
                 <Button
                     onClick={() => setShoppingCart(reject(shoppingCart, ["code", code]))}
                     variant="contained"

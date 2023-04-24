@@ -2,7 +2,7 @@
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useEffect, useMemo, useState } from "react";
-import ProductCard from "@/molecules/ProductCard";
+import ProductCard from "@/organisms/ProductCard";
 import { useSearchParams } from "next/navigation";
 import MenuItem from "@mui/material/MenuItem";
 import { categoryAtom } from "@/utils/state";
@@ -12,6 +12,7 @@ import Stack from "@mui/material/Stack";
 import Tabs from "@mui/material/Tabs";
 import Menu from "@mui/material/Menu";
 import Tab from "@mui/material/Tab";
+import Crumbs from "@/atoms/Crumbs";
 import concat from "lodash/concat";
 import filter from "lodash/filter";
 import { useAtom } from "jotai";
@@ -38,7 +39,13 @@ const WebshopPage = () => {
 
     return (
         <Stack>
-            <Tabs sx={{ mb: 3, display: { xs: "none", md: "flex" } }} value={category}>
+            <Crumbs
+                crumbs={[
+                    { label: "Chezz Tess", href: "/" },
+                    { label: "Webshop", href: "/webshop" },
+                ]}
+            />
+            <Tabs value={category} sx={{ my: 3, display: { xs: "none", md: "flex" } }}>
                 {categories.map((category) => (
                     <Tab
                         key={category}
@@ -53,7 +60,7 @@ const WebshopPage = () => {
             </Tabs>
             <Button
                 onClick={(event) => setAnchorEl(event.currentTarget)}
-                sx={{ mb: 3, display: { xs: "flex", md: "none" } }}
+                sx={{ my: 3, display: { xs: "flex", md: "none" } }}
                 endIcon={<KeyboardArrowDownIcon />}
                 variant="contained"
                 size="large"
@@ -69,12 +76,13 @@ const WebshopPage = () => {
             >
                 {categories.map((category) => (
                     <MenuItem
-                        value={category}
-                        key={category}
                         onClick={() => {
                             setCategory(category);
                             setAnchorEl(null);
                         }}
+                        value={category}
+                        sx={{ px: 3 }}
+                        key={category}
                     >
                         {category}
                     </MenuItem>

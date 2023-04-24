@@ -1,6 +1,5 @@
 
 export const products = [
-
     {
         code: "001",
         name: "Disk Oorbellen - Delfs Blauw",

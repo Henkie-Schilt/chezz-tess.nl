@@ -14,13 +14,10 @@ import "swiper/swiper.min.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Carousel = ({ pictures }) => {
+const Carousel = ({ pictures, width }) => {
     return (
-        <Stack>
-            <Stack
-                direction="row"
-                sx={{ position: "relative", width: { xs: "25em", md: "30em", lg: "30em" }, maxWidth: "80vw" }}
-            >
+        <Stack alignItems="center">
+            <Stack sx={{ position: "relative", width, maxWidth: "90vw" }} direction="row">
                 <Fab
                     sx={{
                         ":focus": {
@@ -46,7 +43,7 @@ const Carousel = ({ pictures }) => {
                     }}
                     autoplay={{ delay: 4000, disableOnInteraction: false }}
                     modules={[Pagination, Navigation, Autoplay]}
-                    style={{ width: "100%" }}
+                    style={{ width: "40%" }}
                     className="mySwiper"
                     spaceBetween={30}
                     speed={1000}
@@ -57,11 +54,12 @@ const Carousel = ({ pictures }) => {
                         <SwiperSlide key={picture}>
                             <Grid2 container alignItems="center" justifyContent="center">
                                 <Image
-                                    style={{ objectFit: "cover", height: "100%", width: "100%", borderRadius: "20px" }}
+                                    style={{ objectFit: "cover", height: "100%", width: "100%", borderRadius: "3em" }}
                                     src={`/static/${picture}.jpg`}
                                     alt={picture}
                                     height={600}
                                     width={600}
+                                    priority
                                 />
                             </Grid2>
                         </SwiperSlide>

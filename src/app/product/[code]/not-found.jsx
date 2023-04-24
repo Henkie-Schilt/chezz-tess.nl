@@ -2,36 +2,19 @@
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material/styles";
+import Carousel from "@/molecules/Carousel";
 import Button from "@mui/material/Button";
 import products from "@/config/products";
 import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
-import sample from "lodash/sample";
-import { useMemo } from "react";
-import Image from "next/image";
+import Paper from "@mui/material/Paper";
 import Link from "next/link";
+import map from "lodash/map";
 
-const ProductNotFound = () => {
-    const product = useMemo(() => sample(products), []);
-
-    return (
-        <Grid2
-            sx={{ backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.5), borderRadius: "30px", p: 3 }}
-            justifyContent="space-evenly"
-            direction="row-reverse"
-            alignItems="center"
-            rowGap={3}
-            container
-        >
-            <Grid2 xs={12} md={6} sx={{ maxWidth: { xs: "40vh", md: "50vw" } }}>
-                <Box sx={{ pb: "100%", position: "relative" }}>
-                    <Image
-                        src={`/static/${product.code}.jpg`}
-                        style={{ objectFit: "contain" }}
-                        alt={product.name}
-                        fill
-                    />
-                </Box>
+const ProductNotFound = () => (
+    <Paper sx={{ backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.5), py: 3, px: 6 }}>
+        <Grid2 justifyContent="space-evenly" direction="row-reverse" alignItems="center" rowGap={3} container>
+            <Grid2 xs={12} md={6}>
+                <Carousel pictures={map(products, "code")} width="30em" />
             </Grid2>
             <Grid2 xs={12} md={6} sx={{ px: { xs: 1, md: 6 } }}>
                 <Stack rowGap={2}>
@@ -44,7 +27,7 @@ const ProductNotFound = () => {
                     <Typography variant="subtitle1" sx={{ pb: 4 }}>
                         Ga alsjeblieft terug naar de webshop
                     </Typography>
-                    <Link href="/webshop" style={{ textDecoration: "none" }}>
+                    <Link href="/webshop" style={{ color: "inherit" }}>
                         <Button color="primary" variant="contained" size="large" fullWidth>
                             Webshop
                         </Button>
@@ -52,7 +35,7 @@ const ProductNotFound = () => {
                 </Stack>
             </Grid2>
         </Grid2>
-    );
-};
+    </Paper>
+);
 
 export default ProductNotFound;

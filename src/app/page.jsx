@@ -1,6 +1,6 @@
 import { WEBSHOP_NAME, WEBSHOP_DESCRIPTION, WEBSHOP_PRIMARY_COLOR } from "@/config/constants";
 import { getProductTokens } from "@/utils/utils";
-import Home from "@/organisms/Home";
+import Home from "./Home";
 
 export const metadata = {
     title: WEBSHOP_NAME,

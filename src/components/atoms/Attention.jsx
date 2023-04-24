@@ -6,7 +6,7 @@ import { createElement } from "react";
 
 const Attention = ({ icon, text }) => (
     <Paper sx={{ backgroundColor: (theme) => theme.palette.primary.main, p: 2, width: "100%" }}>
-        <Stack alignItems="center" direction="row">
+        <Stack alignItems="center" direction="row" sx={{ px: 2 }}>
             {createElement(icon, { color: "secondary", sx: { fontSize: "2em", mr: 3, ml: 1 } })}
             <Typography variant="body2" color="text.secondary">
                 {text}

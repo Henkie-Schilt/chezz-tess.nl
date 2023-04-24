@@ -3,6 +3,9 @@ import { WEBSHOP_PRIMARY_COLOR, WEBSHOP_SECONDARY_COLOR, WEBSHOP_BACKGROUND_COLO
 import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
+    shape: {
+        borderRadius: 28,
+    },
     palette: {
         primary: {
             main: WEBSHOP_PRIMARY_COLOR,

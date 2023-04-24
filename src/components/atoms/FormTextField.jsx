@@ -27,12 +27,17 @@ const FormTextField = ({
             <TextField
                 InputProps={{
                     endAdornment: (
-                        <InputAdornment position="end">
+                        <InputAdornment position="end" sx={{ pr: 1 }}>
                             <IconButton onClick={() => resetField(name, { defaultValue: "" })} edge="end" tabIndex={-1}>
                                 <ClearIcon />
                             </IconButton>
                         </InputAdornment>
                     ),
+                }}
+                sx={{
+                    "& label": { paddingLeft: (theme) => theme.spacing(2) },
+                    "& input": { paddingLeft: (theme) => theme.spacing(3.5) },
+                    "& fieldset": { paddingLeft: (theme) => theme.spacing(2.5) },
                 }}
                 minRows={multiline ? 4 : null}
                 helperText={error?.message}

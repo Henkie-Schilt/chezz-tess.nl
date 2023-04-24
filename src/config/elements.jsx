@@ -1,7 +1,5 @@
 "use client";
-
 import VolunteerActivismOutlinedIcon from "@mui/icons-material/VolunteerActivismOutlined";
-import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import Attention from "@/atoms/Attention";
 import Link from "next/link";
@@ -11,13 +9,13 @@ export const HomeElement = (
         text={
             <span>
                 Ik kan ook personelijke sierraden of kaarsen maken, je kunt hiervoor contact met me opnemen via de {" "}
-                <Link href="/contact" style={{ color: "black" }}>
+                <Link href="/contact" style={{ color: "inherit" }}>
                     <b>contactpagina</b>
                 </Link>
                 .
             </span>
         }
-        icon={HandshakeOutlinedIcon}
+        icon={VolunteerActivismOutlinedIcon}
     />
 );
 
@@ -33,6 +31,6 @@ export const CheckoutElement = (
 export const ContactElement = (
     <Attention
         text="Ik kan ook personelijke sierraden of kaarsen maken, je kunt hiervoor contact met me opnemen."
-        icon={HandshakeOutlinedIcon}
+        icon={VolunteerActivismOutlinedIcon}
     />
 );
