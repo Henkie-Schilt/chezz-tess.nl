@@ -54,7 +54,6 @@ export const TemplateEmail = ({ children, preview }) => (
                                         alt={name}
                                     />
                                     <Text style={recommended.title}>{name}</Text>
-                                    <Text style={recommended.text}>{description}</Text>
                                 </Link>
                             </Column>
                         ))}

@@ -18,7 +18,7 @@ const About = ({ posts }) => (
             ]}
         />
         <Grid2 xs={12} sm={9} md={5} lg={4}>
-            <Box sx={{ pb: "70%", position: "relative" }}>
+            <Box sx={{ pb: "100%", position: "relative" }}>
                 <Image
                     style={{ objectFit: "contain", borderRadius: "2em" }}
                     alt={WEBSHOP_DESCRIPTION}
