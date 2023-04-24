@@ -31,7 +31,7 @@ const InstagramPosts = ({ posts }) => {
                     >
                         <Stack direction="row" alignItems="center" justifyContent="center" sx={{ px: 2, py: 1 }}>
                             <IconButton size="large">
-                                <InstagramIcon sx={{ width: "1.5em", height: "1.5em" }} />
+                                <InstagramIcon sx={{ width: "10 px", height: "10 px" }} />
                             </IconButton>
                             <Typography variant="h5" color="text.secondary" sx={{ fontFamily: "Courgette" }}>
                                 {INSTAGRAM_USERNAME}
@@ -49,8 +49,8 @@ const InstagramPosts = ({ posts }) => {
                                 borderRadius: "50%",
                                 aspectRatio: 1 / 1,
                                 objectFit: "cover",
-                                height: "100%",
-                                width: "100%",
+                                height: "90%",
+                                width: "90%",
                             }}
                             alt="Instagram post"
                             src={media_url}

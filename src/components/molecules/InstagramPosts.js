@@ -13,7 +13,7 @@ const InstagramPosts = ({ posts }) => (
     <Grid2 container justifyContent="center" spacing={5} sx={{ my: 3 }}>
         <Link
             href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}
-            style={{ width: "100%", textDecoration: "none" }}
+            style={{ width: "50%", textDecoration: "none" }}
         >
             <Stack direction="row" alignItems="center">
                 <IconButton size="large">
@@ -37,7 +37,7 @@ const InstagramPosts = ({ posts }) => (
                     }}
                 >
                     <Image
-                        style={{ margin: "auto", borderwidth: "170px", borderRadius: "40%" }}
+                        style={{ margin: "auto", borderwidth: "170%", borderRadius: "40%" }}
                         alt="Instagram post"
                         src={media_url}
                         fill
