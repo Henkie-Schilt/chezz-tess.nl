@@ -31,10 +31,11 @@ const About = ({ posts }) => (
         <Grid2 sm={12} md={5} lg={4}>
             <Paper sx={{ backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.5), py: 3, px: 4 }}>
                 <Typography variant="body1">{ABOUT_TEXT}</Typography>
+
             </Paper>
         </Grid2>
-        <Grid2 xs={12}>
-            <InstagramPosts posts={posts} />
+            <Grid2 xs={12} sx={{ maxWidth: "70em" }}>
+                <InstagramPosts posts={posts} />
         </Grid2>
     </Grid2>
 );

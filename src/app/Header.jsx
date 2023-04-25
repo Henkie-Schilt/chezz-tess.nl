@@ -63,7 +63,8 @@ const Header = () => {
                                     alt={`Logo ${WEBSHOP_NAME}`}
                                     src="/static/logo.png"
                                     priority
-                                    fill
+                                    width= '40'
+                                    height= '40' 
                                 />
                             </Link>
                         </Avatar>

@@ -49,8 +49,8 @@ const InstagramPosts = ({ posts }) => {
                                 borderRadius: "50%",
                                 aspectRatio: 1 / 1,
                                 objectFit: "cover",
-                                height: "90%",
-                                width: "90%",
+                                height: "100%",
+                                width: "100%",
                             }}
                             alt="Instagram post"
                             src={media_url}
